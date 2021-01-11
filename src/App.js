@@ -2,8 +2,9 @@ import { useEffect, useState } from 'react';
 import { Router, Link } from '@reach/router';
 import { LoggedIn, LoggedOut, LoginButton, useWebId } from '@solid/react';
 
+import PodConnector from './components/PodConnector';
+
 import Home from './pages/Home';
-import Profile from './pages/Profile';
 
 const App = () => {
   return (
@@ -19,6 +20,10 @@ const App = () => {
             <LoginButton popup="popup.html" className="button is-large is-primary">
               Log in
             </LoginButton>
+            <p className="content">Please connect to your Pod to start taking notes.</p>
+            <p className="content">
+              <PodConnector/>
+            </p>
           </div>
         </section>
       </LoggedOut>

@@ -7,6 +7,8 @@ import Dashboard from '../components/Dashboard';
 import { useProfile } from '../hooks/useProfile';
 import { getPodData } from '../helpers/getPodData';
 
+import styles from './home.module.scss';
+
 const Home = () => {
   const [showProfile, setShowProfile] = useState(false);
   const webId = useWebId();
@@ -28,32 +30,46 @@ const Home = () => {
     setShowProfile(sshowProfile => !showProfile)
   }
 
+  const title = (name)
+    ? `Welcome to your feed, ${name}`
+    : 'Feed';
+
   return (
-    <div>
-      <div>
-        <button
-          type="button"
-          onClick={handleClick}
-        >
-          {showProfile ? "Feed" : "Profile"}
-        </button>
-      </div>
-        {
-          showProfile ? <Profile name={name} podData={podData} />: <Dashboard name={name} podData={podData} />
-        }
-      <footer className="footer">
-        <div className="columns">
-          <p className="column content">
-            <a
-              href="https://github.com/RRustom/solid-rss"
-              title="View the source code on GitHub"
-            >Source code</a>
-          </p>
-          <div className="column has-text-right">
-            <LogoutButton className="button"/>
+    <div className={styles.page}>
+      <div className={styles.navContainer}>
+        <div className={styles.nav}>
+          <div className={styles.logoItems}>
+            <h1 className={styles.logo}>
+              Solid RSS
+            </h1>
+            <p>
+              <a
+                href="https://github.com/RRustom/solid-rss"
+                title="View the source code on GitHub"
+              >Source code</a>
+            </p>
+          </div>
+          <h2 className={styles.welcome}>
+            {title}
+          </h2>
+
+          <div className={styles.buttons}>
+            <button
+              type="button"
+              onClick={handleClick}
+              class={styles.profileButton}
+            >
+              {showProfile ? "Feed" : "Profile"}
+            </button>
+            <LogoutButton />
           </div>
         </div>
-      </footer>
+      </div>
+      <div className={styles.contentContainer}>
+        {
+          showProfile ? <Profile name={name} podData={podData} />: <Dashboard name={name} podData={podData}/>
+        }
+      </div>
     </div>
   )
 }

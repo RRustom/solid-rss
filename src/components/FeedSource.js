@@ -76,8 +76,12 @@ const FeedSource = (props) => {
   return <>
     <article className="card">
       <div className="section content">
-        <Markdown source={feedName || ''}/>
-        <Markdown source={feedURL || ''}/>
+        <div>
+          {feedName}
+        </div>
+        <div>
+          {feedURL}
+        </div>
       </div>
     </article>
   </>;

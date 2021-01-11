@@ -2,19 +2,12 @@ import React from 'react';
 
 import FeedList from './FeedList';
 
-const Dashboard = ({ name, podData }) => {
+import styles from './dashboard.module.scss';
 
-  const title = (name)
-    ? `Welcome to your feed, ${name}`
-    : 'Feed';
+const Dashboard = ({ podData }) => {
 
   return (
-    <div>
-      <section className="section">
-        <h1 className="title">
-          {title}
-        </h1>
-      </section>
+    <div className={styles.container}>
       <FeedList podData={podData} />
     </div>
   );

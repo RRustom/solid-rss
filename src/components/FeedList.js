@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import React from 'react';
 import { schema } from 'rdf-namespaces';
 
 import {useDocument} from '../hooks/useDocument';
@@ -7,6 +7,8 @@ import getArticles from '../helpers/getArticles';
 import getFeedSources from '../helpers/getFeedSources';
 
 import Feed from './Feed.js';
+
+import styles from './dashboard.module.scss';
 
 const FeedList = ({ podData }) => {
   const [feedSources, updateFeedSources] = useDocument(podData.feedSourcesDoc);

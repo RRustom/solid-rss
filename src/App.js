@@ -1,26 +1,26 @@
 import { useEffect, useState } from 'react';
-import { Router, Link } from '@reach/router';
 import { LoggedIn, LoggedOut, LoginButton, useWebId } from '@solid/react';
 
 import PodConnector from './components/PodConnector';
 
 import Home from './pages/Home';
 
+import styles from './App.module.scss'
+
 const App = () => {
   return (
-    <div>
-      <LoggedIn>
-        <Router>
-          <Home path="/" />
-        </Router>
+    <div className={styles.page}>
+      <LoggedIn >
+        <Home />
       </LoggedIn>
       <LoggedOut>
-        <section className="section">
-          <div className="container">
-            <p className="content">Please connect to your Pod to start taking notes.</p>
-            <PodConnector/>
+        <div className={styles.center}>
+          <div className={styles.login}>
+          <h1> A simple RSS reader for Solid </h1>
+          <p className="content">Connect to your Pod to begin.</p>
+          <PodConnector/>
           </div>
-        </section>
+        </div>
       </LoggedOut>
     </div>
   )

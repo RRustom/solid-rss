@@ -1,0 +1,24 @@
+@import "../styles/colors.scss";
+
+.container {
+  display: flex;
+  flex-flow: column nowrap;
+  width: 50%;
+  max-width: 50%;
+}
+
+.item {
+  display: flex;
+  flex-flow: column nowrap;
+}
+
+.feedSourceElement {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.action {
+  cursor: pointer;
+}

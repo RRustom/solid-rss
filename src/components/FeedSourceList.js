@@ -1,7 +1,7 @@
 import React from 'react';
 import { schema } from 'rdf-namespaces';
-import editIcon from 'material-design-icons/image/svg/production/ic_edit_48px.svg';
-import deleteIcon from 'material-design-icons/action/svg/production/ic_delete_48px.svg';
+import editIcon from 'material-design-icons/image/svg/production/ic_edit_24px.svg';
+import deleteIcon from 'material-design-icons/action/svg/production/ic_delete_24px.svg';
 
 import addFeed from '../helpers/addFeed';
 import byDate from '../helpers/byDate';
@@ -9,6 +9,8 @@ import getFeedSources from '../helpers/getFeedSources';
 import {useDocument} from '../hooks/useDocument';
 import FeedSource from './FeedSource';
 import NewFeedSource from './NewFeedSource';
+
+import styles from './feedSourceList.module.scss';
 
 const FeedSourceList = ({ podData }) => {
   const [feedList, updateFeedList] = useDocument(podData.feedSourcesDoc);
@@ -64,26 +66,22 @@ const FeedSourceList = ({ podData }) => {
 
   const feedSourceElements = feedSourceList.sort(byDate).map((feedSource) => (
     <div key={feedSource.asRef()}>
-      <div className="columns">
-        <div className="column">
+      <div className={styles.feedSourceElement}>
           <FeedSource
             feedSource={feedSource}
             onChange={(updatedContent) => editFeed(updatedContent, feedSource)}
             onCancelEdit={() => setEditMode([feedSource.asRef(), false])}
             mode={feedInEditMode.includes(feedSource.asRef()) ? 'editing' : 'viewing'}
           />
-        </div>
-        <div className="column is-narrow is-2-desktop">
-          <nav className="panel">
-            {/* Bulma expects an <a>, so I added role="button":  */}
-            {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
+        <div>
+          <div>
             <a
               onClick={() => setEditMode([feedSource.asRef(), true])}
               title="Edit this feed"
-              className="panel-block"
+              className={styles.action}
               role="button"
             >
-              <span className="panel-icon">
+              <span>
                 <img src={editIcon} alt=""/>
               </span>
               Edit
@@ -91,15 +89,15 @@ const FeedSourceList = ({ podData }) => {
             <a
               onClick={() => deleteFeed(feedSource)}
               title="Delete this feed"
-              className="panel-block"
+              className={styles.action}
               role="button"
             >
-              <span className="panel-icon">
+              <span>
                 <img src={deleteIcon} alt=""/>
               </span>
               Delete
             </a>
-          </nav>
+          </div>
         </div>
       </div>
       <hr/>
@@ -107,14 +105,14 @@ const FeedSourceList = ({ podData }) => {
   ));
 
   return (
-    <>
-      <section className="section">
+    <div className={styles.container}>
+      <div className={styles.item}>
         <NewFeedSource onSave={saveFeed}/>
-      </section>
-      <section className="section">
+      </div>
+      <div className={styles.item}>
         {feedSourceElements}
-      </section>
-    </>
+      </div>
+    </div>
   );
 };
 

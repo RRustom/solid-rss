@@ -1,0 +1,49 @@
+@import './colors.scss';
+
+html {
+  height: 100%;
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+
+body {
+  height: 100%;
+  max-width: 100%;
+  width: 100%;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  margin: auto;
+  text-align: left;
+  overflow-wrap: break-word;
+  font-family: 'Futura', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: $light_gray;
+  color: $dark_purple;
+}
+
+// main {
+//   height: 100%;
+//   width: 100%;
+// }
+
+h1 {
+  margin-top: 0;
+  color: $pink;
+  max-width: inherit;
+}
+
+p {
+  text-align: left;
+  font-weight: lighter;
+}
+
+ul {
+  list-style: none;
+}
+
+li {
+  text-align: left;
+}

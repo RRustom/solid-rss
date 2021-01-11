@@ -1,0 +1,63 @@
+@import "../styles/colors.scss";
+
+.page {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: flex-start;
+}
+
+.nav {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-around;
+  align-items: flex-start;
+  width: 100%;
+  height: 75px;
+}
+
+.navContainer {
+  //position: fixed;
+  display: flex;
+  top: 10px;
+  left: 0;
+  margin: auto;
+  width: 100%;
+}
+
+.welcome {
+  margin-top: 0;
+}
+
+.logo {
+  margin-bottom: 0;
+}
+
+.logoItems {
+  display: flex;
+  flex-flow: column nowrap;
+}
+
+.buttons {
+  display: flex;
+  flex-flow: row nowrap;
+}
+
+.profileButton {
+  color:$dark_purple;
+  font-size: 20px;
+  background: none;
+  border: none;
+	cursor: pointer;
+  font: inherit;
+}
+
+.contentContainer {
+  display: flex;
+  width: 100%;
+}
+
+.content {
+  display: flex;
+}

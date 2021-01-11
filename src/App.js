@@ -17,13 +17,8 @@ const App = () => {
       <LoggedOut>
         <section className="section">
           <div className="container">
-            <LoginButton popup="popup.html" className="button is-large is-primary">
-              Log in
-            </LoginButton>
             <p className="content">Please connect to your Pod to start taking notes.</p>
-            <p className="content">
-              <PodConnector/>
-            </p>
+            <PodConnector/>
           </div>
         </section>
       </LoggedOut>

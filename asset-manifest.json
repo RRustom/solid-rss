@@ -1,22 +1,22 @@
 {
   "files": {
     "main.css": "/solid-rss/static/css/main.6dea0f05.chunk.css",
-    "main.js": "/solid-rss/static/js/main.2440efce.chunk.js",
-    "main.js.map": "/solid-rss/static/js/main.2440efce.chunk.js.map",
+    "main.js": "/solid-rss/static/js/main.8f9d3111.chunk.js",
+    "main.js.map": "/solid-rss/static/js/main.8f9d3111.chunk.js.map",
     "runtime-main.js": "/solid-rss/static/js/runtime-main.ef807259.js",
     "runtime-main.js.map": "/solid-rss/static/js/runtime-main.ef807259.js.map",
-    "static/js/2.be529368.chunk.js": "/solid-rss/static/js/2.be529368.chunk.js",
-    "static/js/2.be529368.chunk.js.map": "/solid-rss/static/js/2.be529368.chunk.js.map",
+    "static/js/2.68541ea6.chunk.js": "/solid-rss/static/js/2.68541ea6.chunk.js",
+    "static/js/2.68541ea6.chunk.js.map": "/solid-rss/static/js/2.68541ea6.chunk.js.map",
     "index.html": "/solid-rss/index.html",
     "static/css/main.6dea0f05.chunk.css.map": "/solid-rss/static/css/main.6dea0f05.chunk.css.map",
-    "static/js/2.be529368.chunk.js.LICENSE.txt": "/solid-rss/static/js/2.be529368.chunk.js.LICENSE.txt",
+    "static/js/2.68541ea6.chunk.js.LICENSE.txt": "/solid-rss/static/js/2.68541ea6.chunk.js.LICENSE.txt",
     "static/media/ic_delete_48px.svg": "/solid-rss/static/media/ic_delete_48px.f809efec.svg",
     "static/media/ic_edit_48px.svg": "/solid-rss/static/media/ic_edit_48px.fdc9e09a.svg"
   },
   "entrypoints": [
     "static/js/runtime-main.ef807259.js",
-    "static/js/2.be529368.chunk.js",
+    "static/js/2.68541ea6.chunk.js",
     "static/css/main.6dea0f05.chunk.css",
-    "static/js/main.2440efce.chunk.js"
+    "static/js/main.8f9d3111.chunk.js"
   ]
 }

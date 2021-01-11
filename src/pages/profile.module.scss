@@ -1,4 +1,12 @@
-.page {
+.container {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  flex-direction: row nowrap;
+  align-items: flex-start;
+}
+
+.content {
   display: flex;
   width: 100%;
   flex-flow: column nowrap;

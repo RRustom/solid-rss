@@ -47,3 +47,27 @@ ul {
 li {
   text-align: left;
 }
+
+button {
+  border-radius: 8px;
+  cursor: pointer;
+  font-family: 'Futura', sans-serif;
+  font-weight: normal;
+  border: 1px solid;
+  &:disabled {
+    color: $gray;
+    border-color: $dark_gray;
+    background-color: $dark_gray;
+    cursor: default;
+  }
+  &:hover {
+    color: $pink;
+    border-color: $pink;
+  }
+}
+
+a {
+  &:hover {
+    color: $pink;
+  }
+}

@@ -1,7 +1,9 @@
 import { useState, useEffect } from 'react';
 
 import SaveButton from './SaveButton';
-import { fetchFeed } from '../helpers/fetchFeed.js'
+import { fetchFeed } from '../helpers/fetchFeed.js';
+
+import styles from './feedList.module.scss';
 
 const Feed = ({ feedSource, feedName, articlesList }) => {
   const [feed, setFeed] = useState([]);
@@ -15,20 +17,21 @@ const Feed = ({ feedSource, feedName, articlesList }) => {
   }, []);
 
   const listItems = feed.map(item =>
-    <li key={item.link}>
+    <div key={item.link} className={styles.feedItem}>
       <div>
-        [{feedName}]
+        <span>
+          [{feedName}]&nbsp;
+        </span>
         <a href={item.link}>{item.title}</a>
-        <SaveButton articleName={item.title} articleURL={item.link} articlesList={articlesList}/>
+        &nbsp;
       </div>
-    </li>
+      <SaveButton articleName={item.title} articleURL={item.link} articlesList={articlesList}/>
+    </div>
   )
 
   return (
-    <div>
-      <ul>
-        {listItems}
-      </ul>
+    <div className={styles.container}>
+      {listItems}
     </div>
   )
 }

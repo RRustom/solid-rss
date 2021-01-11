@@ -1,5 +1,19 @@
 # Getting Started with Create React App
 
+
+// const sources = [
+//   "https://news.ycombinator.com/rss",
+//   "https://deepmind.com/blog/feed/basic/",
+//   //"https://freedom-to-tinker.com/feed/",
+//   // "https://www.eff.org/rss/updates.xml",
+//   // "http://cdn.technologyreview.com/topnews.rss"
+// ]
+
+
+
+
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts

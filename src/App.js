@@ -1,25 +1,29 @@
-import logo from './logo.svg';
-import './App.css';
+import { useEffect, useState } from 'react';
+import { Router, Link } from '@reach/router';
+import { LoggedIn, LoggedOut, LoginButton, useWebId } from '@solid/react';
 
-function App() {
+import Home from './pages/Home';
+import Profile from './pages/Profile';
+
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <LoggedIn>
+        <Router>
+          <Home path="/" />
+        </Router>
+      </LoggedIn>
+      <LoggedOut>
+        <section className="section">
+          <div className="container">
+            <LoginButton popup="popup.html" className="button is-large is-primary">
+              Log in
+            </LoginButton>
+          </div>
+        </section>
+      </LoggedOut>
     </div>
-  );
+  )
 }
 
 export default App;

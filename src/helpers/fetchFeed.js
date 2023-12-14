@@ -1,6 +1,6 @@
 import Parser from 'rss-parser'
 
-const CORS_PROXY = "https://cors-anywhere.herokuapp.com/";
+const CORS_PROXY = "https://cors-proxy.fringe.zone/";
 
 export const fetchFeed = async (url) => {
   let parser = new Parser();
